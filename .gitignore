@@ -1,4 +1,4 @@
-# WordPress AI Agent .gitignore
+# Drupal AI Agent .gitignore
 
 # Environment variables and secrets
 .env
@@ -12,6 +12,18 @@
 config/secrets.py
 secrets.json
 credentials.json
+
+# Drupal sites directory (contains all created sites)
+sites/
+sites/*
+
+# Legacy and backup files
+main_old.py
+main_clean.py
+main_legacy*.py
+requirements_legacy.txt
+*_backup.py
+*.bak
 
 # Python
 __pycache__/
@@ -96,20 +108,16 @@ poetry.lock
 logs/
 log/
 
-# Media uploads (temporary)
-uploads/
-temp_media/
-media_cache/
-
 # Database files
 *.db
 *.sqlite
 *.sqlite3
 
-# WordPress specific
-wp-config.php
-wp-content/uploads/
+# Drupal specific
 .htaccess
+settings.php
+settings.local.php
+services.yml
 
 # AI model caches
 .ai_cache/
